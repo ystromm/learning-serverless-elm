@@ -1,4 +1,4 @@
-service: elm-serverless-demo
+service: learning-elm-serverless
 
 provider:
   name: aws
