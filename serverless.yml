@@ -1,0 +1,22 @@
+service: elm-serverless-demo
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    dontPrintOutput: true
+
+functions:
+  hello:
+    handler: src/Hello/api.handler # Refers to function `handler` exported from `Hello/api.js`
+    events:
+      - http:
+          integration: lambda-proxy
+          path: /
+          method: ANY
