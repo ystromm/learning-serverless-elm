@@ -61,3 +61,4 @@ elm-stuff
 .idea
 *.iml
 .webpack
+.serverless
