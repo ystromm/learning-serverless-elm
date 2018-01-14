@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === 'production') {
     });
 
     config.plugins = config.plugins || [];
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+    // config.plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 
 module.exports = config;
